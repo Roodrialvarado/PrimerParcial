@@ -1,8 +1,7 @@
-# PrimerParcialMagnetoDDS
-Primer Parcial Back End- DDS 2024
-# Consigna
+# PrimerParcial
+Primer Parcial Back End- DDS
 
-Magneto quiere reclutar la mayor cantidad de mutantes para poder luchar contra los X-Mens.
+-Magneto quiere reclutar la mayor cantidad de mutantes para poder luchar contra los X-Mens.
 
 Te ha contratado a ti para que desarrolles un proyecto que detecte si un humano es mutante basándose en su secuencia de ADN.
 
@@ -33,13 +32,6 @@ Exponer un servicio extra “/stats” que devuelva un Json con las estadística
 Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico (Entre 100 y 1 millón de peticiones por segundo). Utilizar Jmeter 
 
 Test-Automáticos, Code coverage > 80%, Diagrama de Secuencia / Arquitectura del sistema.
-# Environment
-- IDE: IntelliJ IDEA
-- Project Gradle- Groovy
-- Lenguaje: Java
-- Spring Boot 3.3.5
-- Java 17 
-- H2 Data Base
 
 # Ejecucion 
 El proyecto ha sido deployado a Render, se puede acceder mediante el siguiente link: https://primerparcialmagnetodds.onrender.com
@@ -58,9 +50,3 @@ spring.datasource.password=
 
 
 
-# Diagrama de arquitectura
-En este diagrama, el cliente (JMeter) envía solicitudes HTTP a los controladores API REST. El /mutant/controlador recibe la secuencia de ADN y llama al servicio de verificación de ADN. El /obtenerestadisticas llama al servicio de estadísticas para recopilar y devolver estadísticas. Ambos servicios llaman a sus respectivos repositorios para almacenar o recuperar datos. Los datos se almacenan en la base de datos H2.
-
-# Diagrama de secuencia
-
-En este diagrama, el cliente envía una solicitud POST al /mutant/punto final con la secuencia de ADN. El controlador recibe esta solicitud y pasa la secuencia de ADN al servicio de verificación de ADN. A continuación, el servicio evalúa la secuencia y llama al repositorio de ADN para comprobar si la secuencia ya está almacenada. Si la secuencia es nueva, se almacena y se clasifica como mutante o humana. A continuación, el servicio devuelve el resultado de la clasificación al controlador. Según el resultado, el controlador devuelve un HTTP 200 OK si el ADN es mutante o un HTTP 403 Forbidden si no lo es.
