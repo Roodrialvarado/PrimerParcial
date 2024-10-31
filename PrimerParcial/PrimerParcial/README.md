@@ -32,12 +32,7 @@ Exponer un servicio extra “/stats” que devuelva un Json con las estadística
 Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico (Entre 100 y 1 millón de peticiones por segundo). Utilizar Jmeter 
 
 Test-Automáticos, Code coverage > 80%, Diagrama de Secuencia / Arquitectura del sistema.
-
-# Ejecucion 
-El proyecto ha sido deployado a Render, se puede acceder mediante el siguiente link: https://primerparcialmagnetodds.onrender.com
-- POST /adn - Recibe la matriz deL ADN a verificar.
-- GET /obtenerEstadisticas - Devuelve la cantidad de mutantes y humanos verificados, con su respectivo ratio.
-  
+-------------------------------------------------------------------
 BASE DE DATOS
 - Configuracion de la base de datos H2
 spring.datasource.url=jdbc:h2:file:./data/testdb
@@ -47,6 +42,11 @@ spring.datasource.username=sa
 spring.datasource.password=
 -LEVANTAR H2 con este comando
  http://localhost:8081/h2-console/
-
+---------------------------------------------------------------------
+# Ejecucion 
+El proyecto ha sido deployado a Render, se puede acceder mediante el siguiente link: https://primerparcial-kn69.onrender.com
+- POST /adn - Recibe la matriz deL ADN a verificar.
+- GET /obtenerEstadisticas - Devuelve la cantidad de mutantes y humanos verificados, con su respectivo ratio.
+  
 
 
